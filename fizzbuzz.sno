@@ -1,0 +1,11 @@
+Loop   N = N + 1
+       LE(N, 100)              :F(End)
+       Line = ""
+       EQ(0, REMDR(N, 3))      :F(NoFizz)
+       Line = "Fizz"
+NoFizz EQ(0, REMDR(N, 5))      :F(NoBuzz)
+       Line = Line "Buzz"
+NoBuzz EQ(SIZE(Line), 0)       :F(Print)
+       Line = N
+Print  Output = Line           :S(Loop)
+End

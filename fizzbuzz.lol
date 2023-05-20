@@ -1,0 +1,24 @@
+HAI 1.3
+CAN HAS STRING?
+IM IN YR Loop UPPIN YR I WILE DIFFRINT I AN 100
+   I HAS AN N  ITZ SUM OF I AN 1  BTW Since we can only loop from 0
+   I HAS AN M3 ITZ MOD OF N AN 3
+   I HAS AN M5 ITZ MOD OF N AN 5
+   I HAS A Line ITZ ""
+   BOTH SAEM M3 AN 0, O RLY?
+     YA RLY
+       Line R SMOOSH Line "Fizz" MKAY
+   OIC
+   BOTH SAEM M5 AN 0, O RLY?
+     YA RLY
+       Line R SMOOSH Line "Buzz" MKAY
+   OIC
+
+   BOTH SAEM 0 AN I IZ STRING'Z LEN YR Line MKAY, O RLY?
+     YA RLY
+       VISIBLE N
+     NO WAI
+       VISIBLE Line
+   OIC
+IM OUTTA YR Loop
+KTHXBYE

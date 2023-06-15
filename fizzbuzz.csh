@@ -6,7 +6,7 @@ while ($i <= 100)
   @ m5 = $i % 5
   if ($m3 == 0) set line='Fizz'
   if ($m5 == 0) set line="${line}Buzz"
-  if ($line == "") then
+  if ($line == '') then
     echo $i
   else
     echo $line

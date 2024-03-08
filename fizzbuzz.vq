@@ -1,0 +1,8 @@
+1 100 { 
+    0 tam 
+    latlh 15 chuv { "FizzBuzz" cha' tam 1 boq tam } ghobe'chugh
+    latlh 5 chuv { "Buzz" cha' tam 1 boq tam } ghobe'chugh
+    latlh 3 chuv { "Fizz" cha' tam 1 boq tam } ghobe'chugh
+    tam { latlh cha' } ghobe'chugh
+    1 boq
+} vangqa'

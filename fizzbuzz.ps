@@ -1,9 +1,9 @@
 %!
 
 % Useful constants
-/inch        { 72 mul } bind def                 % points per inch
-/page_width  8.5 inch def                        % US Letter: 8.5" wide
-/page_height 11 inch def                         % US Letter: 11" high
+/inch        { 72 mul } bind def  % points per inch
+/page_width  8.5 inch def         % US Letter: 8.5" wide
+/page_height 11 inch def          % US Letter: 11" high
 
 % Configurable parameters
 /font_family   (Courier) def
@@ -12,7 +12,7 @@
 /margin_bottom margin_top def
 /margin_left   1 inch def
 /margin_right  margin_left def
-/row_major     false def                            % if true, count across columns; if false, count down rows
+/row_major     false def          % if true, count across columns instead of down rows
 
 % Derived parameters
 /usable_width  page_width margin_left sub margin_right sub def

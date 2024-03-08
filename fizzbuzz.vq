@@ -1,7 +1,7 @@
-1 100 { 
-    0 tam 
-    latlh 3 chuv { "Fizz" cha'neH tam 1 boq tam } ghobe'chugh
-    latlh 5 chuv { "Buzz" cha'neH tam 1 boq tam } ghobe'chugh
+1 100 {
+    0 tam
+    latlh 3 chuv  { "Fizz"     cha'neH tam 1 boq tam } ghobe'chugh
+    latlh 5 chuv  { "Buzz"     cha'neH tam 1 boq tam } ghobe'chugh
     tam { latlh cha'neH } ghobe'chugh
     "" cha'
     1 boq

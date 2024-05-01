@@ -1,8 +1,8 @@
 repeat 100 [
-    make "flag "true
-    if equalp 0 modulo # 3 [type "Fizz make "flag "false]
-    if equalp 0 modulo # 5 [type "Buzz make "flag "false]
-    if :flag [type #]
-    print "||
+   localmake "print "true
+   if equalp 0 modulo # 3 [ type "Fizz make "print "false ]
+   if equalp 0 modulo # 5 [ type "Buzz make "print "false ]
+   if :print [type #]
+   (print)
 ]
 bye

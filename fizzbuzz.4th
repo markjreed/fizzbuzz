@@ -1,4 +1,4 @@
-: fizzbuzz
+: fizzbuzz ( -- )
   101 1 do
     true
     i 3 mod 0= if ." Fizz" false and then

@@ -1,9 +1,9 @@
 %!
 
 % Useful constants
-/inch        { 72 mul } bind def  % points per inch
-/page_width  8.5 inch def         % US Letter: 8.5" wide
-/page_height 11 inch def          % US Letter: 11" high
+/inch        { 72 mul } bind def                 % points per inch
+/page_width  8.5 inch def                        % US Letter: 8.5" wide
+/page_height 11 inch def                         % US Letter: 11" high
 
 % Configurable parameters
 /font_family   (Courier) def
@@ -12,46 +12,48 @@
 /margin_bottom margin_top def
 /margin_left   1 inch def
 /margin_right  margin_left def
-/row_major     false def          % if true, count across columns instead of down rows
-
+/row_major     false def                         % if true, count across columns;
+                                                 % if false, count down rows
 % Derived parameters
 /usable_width  page_width margin_left sub margin_right sub def
 /usable_height page_height margin_top sub margin_bottom sub def
 /line_height   font_size 1.5 mul def
 /rows          usable_height line_height div cvi def          % lines per column
 /columns       100 rows div ceiling cvi def                   % columns needed
-/col_size      usable_width columns div def                   % width of one column
-/x0            margin_left def                                % x coordinate where text starts on page
-/y0            page_height margin_top sub line_height sub def % y coordinate where text starts on page
+/col_size      usable_width columns div def                   % width of one col
+/x0            margin_left def                                % x coord where
+                                                              % text starts 
+/y0            page_height margin_top sub line_height sub def % y coord
 
-/str (00)  def                                     % a string buffer to use for printing numbers
+/str (00)  def                                                % buffer to use for
+                                                              % printing numbers
 
-font_family findfont font_size scalefont setfont   % set font
+font_family findfont font_size scalefont setfont              % set font
 
 0 1 columns 1 sub { /j exch def                    % loop for j from 0 to columns-1
   j col_size mul x0 add y0 moveto                  % move to top of column
   0 1 rows 1 sub { /i exch def                     % loop for i from 0 to rows-1
     row_major {
-      i columns mul j add                          % if row-major, current number is i*columns+j (+1)
+      i columns mul j add                          % row-major: i*columns+j
     } {
-      j rows mul i add                             % otherwise, j*rows+i (+1)
+      j rows mul i add                             % col-major: j*rows+i
     } ifelse
-    1 add                                          % the +1
+    1 add                                          % +1
     dup 100 gt { exit } if                         % stop if it's >100
-    currentpoint /y exch def /x exch def           % remember current position in x,y
+    currentpoint /y exch def /x exch def           % remember current x,y
     /p 1 def                                       % set print-number flag
-    dup 3 mod 0 eq {                               % if current number is divisible by 3
+    dup 3 mod 0 eq {                               % if divisible by 3
       /p 0 def                                     % clear flag
       (Fizz) show                                  % and print "Fizz"
     } if
-    dup 5 mod 0 eq {                               % if current number is divisible by 5
+    dup 5 mod 0 eq {                               % if divisible by 5
       /p 0 def                                     % clear flag
       (Buzz) show                                  % and print "Buzz"
     } if
     p 1 eq {                                       % if flag is set
-      str cvs show                                 % convert current index to text and print it
-    } { pop } ifelse                               % otherwise pop it off the stack
-    x y line_height sub moveto                     % move to next line ( x, y-line_height )
+      str cvs show                                 % convert to text and print
+    } { pop } ifelse                               % otherwise pop
+    x y line_height sub moveto                     % move to next line 
   } for
 } for
 showpage

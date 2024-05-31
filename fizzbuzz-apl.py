@@ -6,9 +6,10 @@
     print(
         "".join(
             [
-                ["Fizz", "Buzz", str(w)][i] if f else ""
+                ["Fizz", "Buzz", str(w)][i]
                 for a, b in [[0 == w % n for n in [3, 5]]]
                 for i, f in enumerate([a, b, not (a or b)])
+                if f
             ]
         )
     )

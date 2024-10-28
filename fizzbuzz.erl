@@ -13,4 +13,4 @@ fizzbuzz(N) ->
     end.
 
 main(_) -> lists:map(fun(N) -> io:fwrite("~s~n",[fizzbuzz(N)]) end,
-                     lists:seq(1,100,1)).
+                     lists:seq(1,100)).

@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # FizzBuzz in Python, but using the same approach as this APL solution:
 # {⎕←∊'Fizz' 'Buzz' ⍵/⍨d,⍱/d←0=3 5|⍵}¨⍳100
-
 [
     print(
         "".join(

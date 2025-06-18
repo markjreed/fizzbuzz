@@ -1,5 +1,5 @@
-: fizz 3 mod 0= if ." fizz" 1 or endif ;
-: buzz 5 mod 0= if ." buzz" 1 or endif ;
-: fizzbuzz 101 1 do 0 i fizz i buzz 0= if i . endif cr loop ;
+: fizz 3 mod 0= if ." fizz" 0 and endif ;
+: buzz 5 mod 0= if ." buzz" 0 and endif ;
+: fizzbuzz 101 1 do 1 i fizz i buzz if i . endif cr loop ;
 fizzbuzz
 

@@ -3,7 +3,7 @@
     true
     i 3 mod 0= if ." Fizz" false and then
     i 5 mod 0= if ." Buzz" false and then
-    if i . then
+    if i 0 <# #s #> type then
     cr
   loop
 ;

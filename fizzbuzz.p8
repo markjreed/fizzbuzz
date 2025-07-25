@@ -1,11 +1,8 @@
-%import syslib
-%import textio
-
+%import textio 
 main {
     sub start() {
         ubyte i
         bool print_num
-
         for i in 1 to 100 {
             print_num = true
             if i % 3 == 0 {

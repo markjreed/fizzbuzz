@@ -7,7 +7,7 @@ BEGIN
         ELIF i MOD 5 = 0 THEN
             printf(($gl$, "Buzz"))
         ELSE 
-            printf(($zzdl$, i))
+            print((whole(i,0), newline))
         FI
      OD
-END;
+END

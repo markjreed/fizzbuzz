@@ -1,0 +1,13 @@
+BEGIN
+    FOR i FROM 1 WHILE i <= 100 DO
+        IF i MOD 15 = 0 THEN
+            printf(($gl$, "FizzBuzz"))
+        ELIF i MOD 3 = 0 THEN
+            printf(($gl$, "Fizz"))
+        ELIF i MOD 5 = 0 THEN
+            printf(($gl$, "Buzz"))
+        ELSE 
+            printf(($zzdl$, i))
+        FI
+     OD
+END;

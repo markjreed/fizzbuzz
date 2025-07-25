@@ -1,9 +1,9 @@
 HAI 1.3
 CAN HAS STRING?
 IM IN YR Loop UPPIN YR I WILE DIFFRINT I AN 100
-   I HAS AN N  ITZ SUM OF I AN 1  BTW Since we can only loop from 0
-   I HAS AN M3 ITZ MOD OF N AN 3
-   I HAS AN M5 ITZ MOD OF N AN 5
+   I HAS A N  ITZ SUM OF I AN 1  BTW Since we can only loop from 0
+   I HAS A M3 ITZ MOD OF N AN 3
+   I HAS A M5 ITZ MOD OF N AN 5
    I HAS A Line ITZ ""
    BOTH SAEM M3 AN 0, O RLY?
      YA RLY
